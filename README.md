@@ -1,5 +1,5 @@
 # -Integration_de_donnees_et_mediation
- Définition et alimentation de trois sources de données (Base de données): 
+ 
  ## src :
  S1 : Emp(EmpNo, Name, data_naissance, Email)
  
@@ -19,4 +19,6 @@ Base de données du service de paye du groupe (base complète)
 Employé (NumEmp, Nom, Mail, DN)
 
 Salaire (NumEmp, Sal, Année)
-### The "global as view" approach
+### Step One :
+
+ Définition et alimentation de trois sources de données (Base de données):
