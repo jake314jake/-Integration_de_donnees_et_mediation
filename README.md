@@ -22,3 +22,10 @@ Salaire (NumEmp, Sal, Année)
 ### Step One :
 
  Définition et alimentation de trois sources de données (Base de données):
+ NB:
+ 
+ S1-------------->SQLITE
+ 
+ S2-------------->MySql (Desktop app)
+ 
+ S2-------------->MySql (Web app phpMyadmin)
