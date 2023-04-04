@@ -29,3 +29,13 @@ Salaire (NumEmp, Sal, Année)
  S2-------------->MySql (Desktop app)
  
  S2-------------->MySql (Web app phpMyadmin)
+ ### Step Two:
+ 
+Objectif : Interface de connexion à la source globale
+
+Créer une interface de connexion à une source globale G :
+
+G : Employé (NomEmp, Salaire, NumDept)
+
+Département (NumDept, NomDept, Budget)
+
