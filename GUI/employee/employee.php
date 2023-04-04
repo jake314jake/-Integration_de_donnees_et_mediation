@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-	<form action="http://localhost/GUI/includes/test.php" method="post">
+	<form action="http://localhost/GUI/includes/Search.php" method="post">
 		<h1>Search in Employee</h1>
 		<p>Please fill in this form.</p>
 		<hr>
@@ -19,14 +19,14 @@
 
 		
 		<hr>
-		<button type="submit" class="registerbutton">Search</button>
+		<button type="submit" class="registerbutton">test</button>
 		
       
 		
 	
 		
 	</form>
-
+	
 
 </body>
 </html>

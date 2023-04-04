@@ -2,6 +2,7 @@
 $host = 'localhost';
 $dbTwo   = 'srctwo';
 $dbThree   = 'srcthree';
+$dbCaching="caching";
 $user = 'root';
 $pass = '';
 $port = "4306";
@@ -14,12 +15,14 @@ $options = [
 ];
 $dsnTwo = "mysql:host=$host;dbname=$dbTwo;charset=$charset;port=$port";
 $dsnThree = "mysql:host=$host;dbname=$dbThree;charset=$charset;port=$port";
+$dsnCaching = "mysql:host=$host;dbname=$dbCaching;charset=$charset;port=$port";
 try {
     echo "<h1>"."Loading..."."</h1>";
     
      $connOne = new  \PDO('sqlite:C:\xampp\htdocs\GUI\includes\db\SrcOne.db');
      $connTwo = new \PDO($dsnTwo, $user, $pass, $options);
      $connThree = new \PDO($dsnThree, $user, $pass, $options);
+     $connCaching=new \PDO($dsnCaching, $user, $pass, $options);
      
      
 } catch (\PDOException $e) {
