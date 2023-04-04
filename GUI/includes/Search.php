@@ -25,7 +25,7 @@ echo "<p>".$queryThree."</p>" ;
 
 $stmt = $connThree->prepare($queryThree);
 $stmt->execute();
-insertToSrcThree($connThree->query($queryThree,$connCaching));
+
 
 displayQueryResultAsTable($connThree->query($queryThree));
 echo "<hr>";
