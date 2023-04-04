@@ -1,0 +1,30 @@
+
+h1 {
+	text-align: center;
+	font-size: 32px;
+	margin-bottom: 30px;
+}
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50vh;
+	border: 2px solid black;
+	width: 50%;
+	margin: 0 auto;
+}
+
+button {
+	padding: 12px 24px;
+	font-size: 16px;
+	border-radius: 4px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	cursor: pointer;
+	margin: 0 10px;
+}
+img{
+	width: 75px;
+	height: 75px;
+}

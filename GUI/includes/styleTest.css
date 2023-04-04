@@ -1,0 +1,31 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:hover {
+    background-color: green;
+}
+p {
+    white-space: pre-wrap;
+    font-size: 2em;
+  }
+  hr {
+    border: none; 
+    height: 2px; 
+    background-color: #000; 
+    margin: 20px 0;
+  }
