@@ -34,4 +34,13 @@ function displayQueryResultAsTable($result) {
         $insert_stmt->execute();
     }
   }
+  function executeQuery($query,$input,$altQuery,$connObject){
+    
+    $addQuery= ($input == "") ? $input : $altQuery ;
+    $query=$query.$addQuery;
+    echo "<p>".$query."</p>" ;
+    echo "<hr>";
+    $stmt = $connObject->prepare($query);
+    $stmt->execute();
+  }
 ?> 

@@ -14,9 +14,10 @@ try{
 $queryTwo="SELECT * FROM  SrcTwo.employe \n
 NATURAL  JOIN SrcTwo.Projet \n
 NATURAL  JOIN SrcTwo.Departement ";
+echo "<p>".$queryTwo."</p>" ;
 $stmt = $connTwo->prepare($queryTwo);
 $stmt->execute();
-echo "<p>".$queryTwo."</p>" ;
+
 
 displayQueryResultAsTable($connTwo->query($queryTwo));
 echo "<hr>";

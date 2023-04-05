@@ -13,10 +13,15 @@ $maxSal=$_POST['salaryMax'];
 $DepName=$_POST['Departement'];
 try{
     echo "<p>"."test..."."</p>";
-
-
-
-$queryThree="SELECT NumEmp , Nom ,Sal FROM  SrcThree.employe \n
+$queryGlobal="SELECT NomEmp, Salaire, NomDept FROM G.Employe  
+NATURAL JOIN G.Departement 
+WHERE Salaire BETWEEN $minSal AND  $maxSal  
+";
+$DepQuery= ($DepName == "") ? $DepName : "AND Departement.NomDept='$DepName';" ;
+$queryGlobal=$queryGlobal.$DepQuery;
+echo "<p>".$queryGlobal."</p>" ;
+echo "<hr>";
+$queryThree="SELECT NumEmp , Nom ,Sal FROM  SrcThree.employe  
 NATURAL  JOIN  SrcThree.Salaire
 WHERE Sal BETWEEN $minSal AND  $maxSal;";
 
@@ -32,8 +37,9 @@ echo "<hr>";
 $queryTwo = "SELECT NumEmp,NomEmp,NomDept,NumDept FROM SrcTwo.employe 
 NATURAL JOIN SrcTwo.Projet 
 NATURAL JOIN SrcTwo.Departement
-WHERE SrcTwo.Departement.NomDept='$DepName';";
- 
+";
+ $DepQuery= ($DepName == "") ? $DepName : "WHERE SrcTwo.Departement.NomDept='$DepName';" ;
+ $queryTwo=$queryTwo.$DepQuery;
 
 echo "<p>".$queryTwo."</p>" ;
 $stmt = $connTwo->prepare($queryTwo);
@@ -42,11 +48,12 @@ $stmt->execute();
 
 displayQueryResultAsTable($connTwo->query($queryTwo));
 echo "<hr>";
-$queryOne="SELECT EmpNo,Name,DeptNo,DeptName FROM Emp \n
-NATURAL  JOIN WorksIn \n
+$queryOne="SELECT EmpNo,Name,DeptNo,DeptName FROM Emp  
+NATURAL  JOIN WorksIn  
 NATURAL  JOIN  Departement
-WHERE DeptName='$DepName';
 ";
+$DepQuery= ($DepName == "") ? $DepName : "WHERE DeptName='$DepName';" ;
+$queryOne=$queryOne.$DepQuery;
 $results = $connOne->query($queryOne);
 echo "<p>".$queryOne."</p>" ;
 displayQueryResultAsTable($connOne->query($queryOne));
